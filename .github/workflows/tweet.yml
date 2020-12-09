@@ -1,8 +1,5 @@
 name: 'Tweet when publishing'
-on:
-  deployment:
-    branches:
-      - gh-pages
+on: deployment
 
 jobs:
   tweet:
