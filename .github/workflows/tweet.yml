@@ -1,5 +1,8 @@
 name: 'Tweet when publishing'
-on: deployment
+on: 
+  workflow_run:
+    workflows: ["Build and deploy Jekyll site to GitHub Pages"]
+    
 
 jobs:
   tweet:
