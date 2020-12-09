@@ -1,6 +1,6 @@
 name: 'Tweet when publishing'
 on:
-  push:
+  deployment:
     branches:
       - gh-pages
 
