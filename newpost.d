@@ -24,8 +24,7 @@ int main(string[] args){
 
     const filename = datestring ~ '-'~title ~ ".md";
     writeln(filename);
-    const utcDiff = currentTime.utcOffset.total!"hours".to!string;
-    const formattedDate = datestring ~ " " ~ timeString ~ " " ~ utcDiff;
+    const formattedDate = datestring ~ " " ~ timeString ~ " -0700";
 
     const contents = format!`---
 layout: post
@@ -36,7 +35,7 @@ categories: taobataocp
 
     writeln(contents);
 
-    //std.file.write("_posts/" ~filename, contents);
+    std.file.write("_posts/" ~filename, contents);
 
     return 0;
 }
